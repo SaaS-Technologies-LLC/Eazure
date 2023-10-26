@@ -11,7 +11,7 @@ Eazure is a Python package that serves as a comprehensive wrapper for Azure util
 - **Table Management**: Efficiently manage your Azure tables.
 - **Queue Management**: Simplify interactions with Azure queues.
 - **Azure Key Vault Utility**: Simplify interactions with Azure Keys.
-
+```
 ## Installation
 
 You can install Eazure using pip:
@@ -37,7 +37,7 @@ blob = client.download_blob('your-container-name', 'your-blob-name', 'output fil
 
 # Upload a blob
 client.upload_blob('your-container-name', 'your-blob-name','input file path')
-
+```
 
 ## Contributing
 
