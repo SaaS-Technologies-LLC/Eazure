@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "Eazure"
 version = "0.1"
-description = "Your package description"  # Add your package description here
-readme = "README.md"  # Ensure this points to your actual README file
-authors = ["Your Name <your.email@example.com>"]  # Replace with your name and email
+description = "Eazure: A package providing easier access to Azure storage, tables, and queue functions."
+readme = "README.md"
+authors = [{name = "SaaS Technologies LLC", email = "newsaastechnologies@gmail.com"}]
 
 [project.dependencies]
 azure-storage-blob = ">=12.8.1"
