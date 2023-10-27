@@ -15,7 +15,7 @@ Eazure is a Python package that serves as a comprehensive wrapper for Azure util
 You can install Eazure using pip:
 
 ```bash
-pip install Eazure
+pip install eazure
 ```
 
 ## Usage
@@ -23,18 +23,18 @@ pip install Eazure
 Here's a simple example of how to use Eazure:
 
 ```python
-import Eazure
+import eazure
 
 # Initialize the Eazure client
-client = Eazure.Client()
+ea = eazure.Client()
 
-client.connection_string = 'connection_string'
+ea.connection_string = 'connection_string'
 
 # Download a blob
-blob = client.download_blob('your-container-name', 'your-blob-name', 'output-file-path')
+ea.download_blob('your-container-name', 'your-blob-name', 'output-file-path')
 
 # Upload a blob
-client.upload_blob('your-container-name', 'your-blob-name','input-file-path')
+ea.upload_blob('your-container-name', 'your-blob-name','input-file-path')
 ```
 
 ## Contributing

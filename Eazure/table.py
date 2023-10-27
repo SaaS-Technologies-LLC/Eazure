@@ -9,12 +9,12 @@ class TableManager:
         self.connection_string = connection_string
         self.table_service_client = TableServiceClient.from_connection_string(connection_string)
 
-    def create_table(self, table_name):
+    def table_create(self, table_name):
         table_client = self.table_service_client.create_table_if_not_exists(table_name=table_name)
         print(f'table created or located: {table_name}')
         return table_client
 
-    def create_entity(self, table_name, new_entity):
+    def table_entity_create(self, table_name, new_entity):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
 
         try:
@@ -27,14 +27,14 @@ class TableManager:
             logging.error(f'Failed to create entity in table: {table_name}. Error: {str(e)}')
             return False
 
-    def get_all_entities(self, table_name):
+    def table_entity_get_all(self, table_name):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
         entities = table.list_entities()
         entities_list = [entity for entity in entities]
         entities_json = json.dumps(entities_list, default=str)
         return entities_json
 
-    def get_single_entity(self, table_name, partition_key, row_key):
+    def table_entity_get_single(self, table_name, partition_key, row_key):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
 
         try:
@@ -44,7 +44,7 @@ class TableManager:
             logging.error(f'Failed to retrieve entity with PartitionKey={partition_key} and RowKey={row_key} from table: {table_name}. Error: {str(e)}')
             return None
 
-    def update_entity(self, table_name, partition_key, row_key, properties_to_update):
+    def table_entity_update(self, table_name, partition_key, row_key, properties_to_update):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
 
         try:
@@ -57,7 +57,7 @@ class TableManager:
             logging.error(f'Failed to update entity in table: {table_name}')
             return False
 
-    def remove_entity(self, table_name, partition_key, row_key):
+    def table_entity_remove(self, table_name, partition_key, row_key):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
 
         try:
@@ -68,7 +68,7 @@ class TableManager:
             logging.error(f'Failed to remove entity in table: {table_name}')
             return False
 
-    def get_cell_value(self, table_name, partition_key, row_key, column_name):
+    def table_entity_get_column_value(self, table_name, partition_key, row_key, column_name):
         table = TableClient.from_connection_string(self.connection_string, table_name=table_name)
         logging.info(f'getCellValue: PK: {partition_key} | RK: {row_key}')
         entity = table.get_entity(partition_key, row_key)

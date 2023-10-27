@@ -1,8 +1,8 @@
 [project]
-name = "Eazure"
+name = "eazure"
 description = "Eazure: A package providing easier access to Azure storage, tables, and queue functions."
 readme = "README.md"
-version = "0.1"
+version = "0.1.1"
 authors = [
     { name = "SaaS Technologies LLC", email = "newsaastechnologies@gmail.com" }
 ]
@@ -32,7 +32,7 @@ requires = ["flit_core >=3.2,<4"]
 "Source" = "https://github.com/SaaS-Technologies-LLC/Eazure/"
 
 [tool.setuptools]
-package-data = {"Eazure" = ["*.dat"]}
+package-data = {"eazure" = ["*.dat"]}
 
 [metadata]
 long_description_content_type = "text/markdown"

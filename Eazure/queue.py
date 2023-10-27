@@ -9,7 +9,7 @@ class QueueManager:
         self.connection_string = connection_string
         self.queue_service_client = QueueServiceClient.from_connection_string(connection_string)
 
-    def get_queue_item(self, queue_name):
+    def queue_get_item(self, queue_name):
         queue_client = QueueClient.from_connection_string(conn_str=self.connection_string, queue_name=queue_name)
         peeked_messages = queue_client.peek_messages(max_messages=1)
 
@@ -18,7 +18,7 @@ class QueueManager:
             msg_id = peeked_message.id
             return decoded_message, msg_id
 
-    def add_message_to_queue(self, queue_name, message):
+    def queue_add_message(self, queue_name, message):
         try:
             queue_client = self.queue_service_client.get_queue_client(queue=queue_name)
             queue_client.message_encode_policy = TextBase64EncodePolicy()
@@ -27,14 +27,14 @@ class QueueManager:
         except AzureError as e:
             logging.error(f"An error occurred: {e.message}")
 
-    def get_queue_length(self, queue_name):
+    def queue_get_length(self, queue_name):
         queue_client = QueueClient.from_connection_string(conn_str=self.connection_string, queue_name=queue_name)
         properties = queue_client.get_queue_properties()
         count = properties.approximate_message_count
         print("Message count: " + str(count))
         return properties.approximate_message_count
 
-    def delete_message(self, queue_name, message_id):
+    def queue_delete_message(self, queue_name, message_id):
         queue_client = QueueClient.from_connection_string(conn_str=self.connection_string, queue_name=queue_name)
         queue_client.delete_message(message_id=message_id)
         return queue_client
