@@ -6,7 +6,7 @@ authors = [
     { name = "SaaS Technologies LLC", email = "newsaastechnologies@gmail.com" }
 ]
 requires-python = ">=3.7"
-license = {file = "LICENSE.txt"}
+license = {file = "LICENSE"}
 dependencies = [
     "azure-storage-blob >=12.8.1",
     "azure-core >=1.9.0",
