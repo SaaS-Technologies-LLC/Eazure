@@ -27,9 +27,9 @@ build-backend = "flit_core.buildapi"
 requires = ["flit_core >=3.2,<4"]
 
 [project.urls]
-"Homepage" = "https://github.com/SaaS-Technologies-LLC/Eazure"
-"Bug Reports" = "https://github.com/SaaS-Technologies-LLC/Eazure/issues"
-"Source" = "https://github.com/SaaS-Technologies-LLC/Eazure/"
+"Homepage" = "https://github.com/SaaS-Technologies-LLC/eazure"
+"Bug Reports" = "https://github.com/SaaS-Technologies-LLC/eazure/issues"
+"Source" = "https://github.com/SaaS-Technologies-LLC/eazure/"
 
 [tool.setuptools]
 package-data = {"eazure" = ["*.dat"]}
