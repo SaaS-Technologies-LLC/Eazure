@@ -1,6 +1,7 @@
 [project]
 name = "Eazure"
 description = "Eazure: A package providing easier access to Azure storage, tables, and queue functions."
+readme = "README.md"
 version = "0.1"
 authors = [
     { name = "SaaS Technologies LLC", email = "newsaastechnologies@gmail.com" }
