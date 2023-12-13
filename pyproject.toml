@@ -1,8 +1,8 @@
 [project]
-name = "eazure"
-description = "Eazure: A package providing easier access to Azure storage, tables, and queue functions."
+name = "ezure"
+description = "ezure: A package providing easier access to Azure storage, tables, and queue functions."
 readme = "README.md"
-version = "0.1.2"
+version = "0.1.0"
 authors = [
     { name = "SaaS Technologies LLC", email = "newsaastechnologies@gmail.com" }
 ]
@@ -27,12 +27,12 @@ build-backend = "flit_core.buildapi"
 requires = ["flit_core >=3.2,<4"]
 
 [project.urls]
-"Homepage" = "https://github.com/SaaS-Technologies-LLC/eazure"
-"Bug Reports" = "https://github.com/SaaS-Technologies-LLC/eazure/issues"
-"Source" = "https://github.com/SaaS-Technologies-LLC/eazure/"
+"Homepage" = "https://github.com/SaaS-Technologies-LLC/ezure"
+"Bug Reports" = "https://github.com/SaaS-Technologies-LLC/ezure/issues"
+"Source" = "https://github.com/SaaS-Technologies-LLC/ezure/"
 
 [tool.setuptools]
-package-data = {"eazure" = ["*.dat"]}
+package-data = {"ezure" = ["*.dat"]}
 
 [metadata]
 long_description_content_type = "text/markdown"
