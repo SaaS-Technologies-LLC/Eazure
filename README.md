@@ -1,6 +1,6 @@
 ## Overview
 
-Eazure (Easy Azure) is a Python package that serves as a comprehensive wrapper for Azure utilities. It simplifies and streamlines interactions with various Azure services, providing easy-to-use functions for downloading and uploading blobs, managing tables, handling queues, and more.
+ezure (Easy Azure) is a Python package that serves as a comprehensive wrapper for Azure utilities. It simplifies and streamlines interactions with various Azure services, providing easy-to-use functions for downloading and uploading blobs, managing tables, handling queues, and more.
 
 ## Features
 
@@ -12,29 +12,29 @@ Eazure (Easy Azure) is a Python package that serves as a comprehensive wrapper f
 
 ## Installation
 
-You can install Eazure using pip:
+You can install ezure using pip:
 
 ```bash
-pip install eazure
+pip install ezure
 ```
 
 ## Usage
 
-Here's a simple example of how to use Eazure:
+Here's a simple example of how to use ezure:
 
 ```python
-import eazure
+import ezure
 
-# Initialize the Eazure client
-ea = eazure.Client()
+# Initialize the ezure client
+ez = ezure.Client()
 
-ea.connection_string = 'connection_string'
+ez.connection_string = 'connection_string'
 
 # Download a blob
-ea.download_blob('your-container-name', 'your-blob-name', 'output-file-path')
+ez.download_blob('your-container-name', 'your-blob-name', 'output-file-path')
 
 # Upload a blob
-ea.upload_blob('your-container-name', 'your-blob-name','input-file-path')
+ez.upload_blob('your-container-name', 'your-blob-name','input-file-path')
 ```
 
 ## Contributing
